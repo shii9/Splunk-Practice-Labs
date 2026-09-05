@@ -1,0 +1,16 @@
+# OS Generated Files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# IDE & Editor Files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Splunk & Log Temp Files
+*.log
+*.tmp
+scratch/
