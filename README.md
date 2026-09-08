@@ -26,14 +26,18 @@ Splunk-Practice-Labs/
 │   ├── README.md                      # Complete Lab 3 Guide, 10 Tasks, SPL Queries & Solutions
 │   └── http_logs.json                 # Dataset (3,001 JSON log entries)
 │
-├── Lab 4/                             # [Upcoming] Windows Event Logs & Sysmon Threat Hunting
-├── Lab 5/                             # [Upcoming] Firewall & Network Traffic Analysis (Palo Alto/pfSense)
-├── Lab 6/                             # [Upcoming] DNS Tunneling & Data Exfiltration Detection
-├── Lab 7/                             # [Upcoming] Email & Phishing Investigation
-├── Lab 8/                             # [Upcoming] Cloud Incident Response (AWS CloudTrail / Azure AD)
-├── Lab 9/                             # [Upcoming] Endpoint Detection & Response (EDR / CrowdStrike)
-├── Lab 10/                            # [Upcoming] SOC Automation & Custom Alerting Engineering
-└── Lab 11/                            # [Upcoming] Enterprise SIEM Dashboard & Capstone Investigation
+├── Lab 4/                             # Lab 4: Splunk Dashboard for SSH Logs & Threat Intelligence
+│   ├── README.md                      # Complete Lab 4 Guide, 10 Tasks, SPL Queries & Solutions
+│   └── ssh_logs_new.json              # Dataset (1,201 JSON log entries)
+│
+├── Lab 5/                             # [Upcoming] Windows Event Logs & Sysmon Threat Hunting
+├── Lab 6/                             # [Upcoming] Firewall & Network Traffic Analysis (Palo Alto/pfSense)
+├── Lab 7/                             # [Upcoming] DNS Tunneling & Data Exfiltration Detection
+├── Lab 8/                             # [Upcoming] Email & Phishing Investigation
+├── Lab 9/                             # [Upcoming] Cloud Incident Response (AWS CloudTrail / Azure AD)
+├── Lab 10/                            # [Upcoming] Endpoint Detection & Response (EDR / CrowdStrike)
+├── Lab 11/                            # [Upcoming] SOC Automation & Custom Alerting Engineering
+└── Lab 12/                            # [Upcoming] Enterprise SIEM Dashboard & Capstone Investigation
 ```
 
 ---
@@ -45,14 +49,15 @@ Splunk-Practice-Labs/
 | **Lab 1** | **SSH Authentication & Brute-Force Threat Analysis** | JSON SSH Telemetry (Zeek) | 🟢 **Completed** | [Lab 1 Manual](./Lab%201/README.md) |
 | **Lab 2** | **DNS Traffic Log & Network Intelligence Analysis** | JSON DNS Telemetry (Zeek) | 🟢 **Completed** | [Lab 2 Manual](./Lab%202/README.md) |
 | **Lab 3** | **HTTP Traffic & Web Application Threat Analysis** | JSON HTTP Telemetry (Zeek) | 🟢 **Completed** | [Lab 3 Manual](./Lab%203/README.md) |
-| **Lab 4** | **Windows Host Intrusion & Sysmon Threat Hunting** | Event IDs 4624, 4688, 1, 3 | 🟡 *Planned* | Upcoming |
-| **Lab 5** | **Perimeter Firewall & Network Traffic Analysis** | Palo Alto / Cisco ASA | 🟡 *Planned* | Upcoming |
-| **Lab 6** | **DNS Tunneling & Data Exfiltration Detection** | DNS Telemetry | 🟡 *Planned* | Upcoming |
-| **Lab 7** | **Phishing Email Analysis & Malicious Attachment Tracking** | Office 365 / Exchange / Gateway | 🟡 *Planned* | Upcoming |
-| **Lab 8** | **Cloud Threat Detection & IAM Privilege Abuse** | AWS CloudTrail / Azure AD | 🟡 *Planned* | Upcoming |
-| **Lab 9** | **Endpoint Malware & Ransomware Investigation** | CrowdStrike / Defender / EDR | 🟡 *Planned* | Upcoming |
-| **Lab 10** | **SIEM Detection Engineering & Threat Alerting** | Multi-source Correlation | 🟡 *Planned* | Upcoming |
-| **Lab 11** | **Comprehensive Enterprise SOC Dashboard Capstone** | Full Cyber Kill Chain | 🟡 *Planned* | Upcoming |
+| **Lab 4** | **Splunk Dashboard for SSH Logs & Threat Intelligence** | JSON SSH Telemetry (Zeek) | 🟢 **Completed** | [Lab 4 Manual](./Lab%204/README.md) |
+| **Lab 5** | **Windows Host Intrusion & Sysmon Threat Hunting** | Event IDs 4624, 4688, 1, 3 | 🟡 *Planned* | Upcoming |
+| **Lab 6** | **Perimeter Firewall & Network Traffic Analysis** | Palo Alto / Cisco ASA | 🟡 *Planned* | Upcoming |
+| **Lab 7** | **DNS Tunneling & Data Exfiltration Detection** | DNS Telemetry | 🟡 *Planned* | Upcoming |
+| **Lab 8** | **Phishing Email Analysis & Malicious Attachment Tracking** | Office 365 / Exchange / Gateway | 🟡 *Planned* | Upcoming |
+| **Lab 9** | **Cloud Threat Detection & IAM Privilege Abuse** | AWS CloudTrail / Azure AD | 🟡 *Planned* | Upcoming |
+| **Lab 10** | **Endpoint Malware & Ransomware Investigation** | CrowdStrike / Defender / EDR | 🟡 *Planned* | Upcoming |
+| **Lab 11** | **SIEM Detection Engineering & Threat Alerting** | Multi-source Correlation | 🟡 *Planned* | Upcoming |
+| **Lab 12** | **Comprehensive Enterprise SOC Dashboard Capstone** | Full Cyber Kill Chain | 🟡 *Planned* | Upcoming |
 
 ---
 
@@ -105,6 +110,23 @@ Splunk-Practice-Labs/
   - Detect targeted forced browsing attempts on sensitive URIs (`/admin`, `/etc/passwd`).
 
 👉 **Read the full Lab 3 Guide with queries and verified answers**: [Lab 3 README](./Lab%203/README.md)
+
+---
+
+## 🛠️ Lab 4 Quick Summary: Splunk Dashboard for SSH Logs & Threat Intelligence
+
+- **Dataset**: `Lab 4/ssh_logs_new.json` (1,201 events)
+- **Tasks**: 10 hands-on dashboard panels
+- **Key Objectives**:
+  - Ingest JSON telemetry containing an additional `username` field.
+  - Build an operational SOC dashboard with dynamic global time range inputs.
+  - Visualize key metrics using Single Value panels (Total Events, Successes, Failures, Recon).
+  - Graph trending login activity using Line Charts and Area Charts.
+  - Generate Pie Charts to identify the distribution of SSH event types.
+  - Implement statistical tables for brute force attribution.
+  - Leverage `iplocation` and `geostats` to map attacking origins on a Choropleth map.
+
+👉 **Read the full Lab 4 Guide with queries and verified answers**: [Lab 4 README](./Lab%204/README.md)
 
 ---
 
